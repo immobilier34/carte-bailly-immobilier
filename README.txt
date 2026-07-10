@@ -1,16 +1,14 @@
-MISE À JOUR GITHUB
+MISE À JOUR GITHUB — VERSION V5
 
-Remplace les fichiers de ton dépôt par :
+Remplace dans ton dépôt :
 - index.html
 - logo-bailly.png
 
-Cette version :
-- agrandit légèrement le logo ;
-- resserre les espacements du bloc de marque ;
-- utilise des icônes plus modernes ;
-- supprime complètement le bouton « Ajouter aux contacts » ;
-- conserve « Me proposer un bien » ;
-- présente le secteur d’intervention comme une simple information ;
-- garde le bouton Appeler en doré comme action principale.
+Cette version apporte :
+- davantage d’espace autour de l’ensemble ;
+- des boutons légèrement plus espacés ;
+- plus d’air avant et après « Secteur d’intervention » ;
+- davantage d’espace en bas de la carte ;
+- un rendu plus équilibré et plus premium.
 
-Le fichier thomas-bailly.vcf n'est plus nécessaire et peut être supprimé du dépôt.
+Après le commit, attends 1 à 3 minutes puis actualise la page.
