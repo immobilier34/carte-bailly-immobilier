@@ -1,74 +1,42 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#081b34">
-  <meta name="description" content="Carte de visite interactive de Thomas Bailly, marchand de biens.">
-  <title>Thomas Bailly — Bailly Immobilier</title>
-  <link rel="icon" href="logo-bailly.png">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#081b34">
+<title>Thomas Bailly — Bailly Immobilier</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="ambient ambient-1"></div>
-  <div class="ambient ambient-2"></div>
+<main class="shell">
+<section class="card">
+<header class="hero">
+<div class="logo-ring"><img src="logo-bailly.png" alt="Logo Bailly Immobilier"></div>
+<p class="brand">BAILLY IMMOBILIER</p>
+<h1>Thomas BAILLY</h1>
+<p class="role">Marchand de biens</p>
+<p class="tagline">Acquisition <span>•</span> Rénovation <span>•</span> Revente</p>
+</header>
+<div class="divider"></div>
 
-  <main class="shell">
-    <section class="card">
-      <div class="brand">
-        <div class="logo-wrap">
-          <img src="logo-bailly.png" alt="Logo Bailly Immobilier">
-        </div>
+<section class="quick-actions">
+<a class="quick primary" href="tel:+33618897932"><span class="ico">☎</span><span><strong>Appeler</strong><small>06 18 89 79 32</small></span></a>
+<a class="quick" href="https://wa.me/33618897932" target="_blank" rel="noopener"><span class="ico">◉</span><span><strong>WhatsApp</strong><small>Écrire maintenant</small></span></a>
+</section>
 
-        <p class="brand-name">BAILLY IMMOBILIER</p>
-        <h1>Thomas BAILLY</h1>
-        <p class="role">Marchand de biens</p>
-        <p class="promise">Acquisition <span>•</span> Rénovation <span>•</span> Revente</p>
-      </div>
+<section class="list-actions">
+<a class="row" href="mailto:contact.bailly.immobilier@gmail.com"><span class="ico">✉</span><span class="copy"><strong>Envoyer un e-mail</strong><small>contact.bailly.immobilier@gmail.com</small></span><span class="arrow">›</span></a>
+<a class="row" href="thomas-bailly.vcf" download><span class="ico">＋</span><span class="copy"><strong>Ajouter aux contacts</strong><small>Enregistrer ma fiche</small></span><span class="arrow">›</span></a>
+<a class="row emphasis" href="mailto:contact.bailly.immobilier@gmail.com?subject=Proposition%20de%20bien%20immobilier"><span class="ico">⌂</span><span class="copy"><strong>Me proposer un bien</strong><small>Envoyer les informations du bien</small></span><span class="arrow">›</span></a>
+</section>
 
-      <div class="divider"></div>
-
-      <div class="grid">
-        <a class="action action-primary" href="tel:+33618897932">
-          <span class="action-icon">☎</span>
-          <span><strong>Appeler</strong><small>06 18 89 79 32</small></span>
-        </a>
-
-        <a class="action" href="mailto:contact.bailly.immobilier@gmail.com">
-          <span class="action-icon">✉</span>
-          <span><strong>Envoyer un e-mail</strong><small>Réponse directe</small></span>
-        </a>
-
-        <a class="action" href="https://wa.me/33618897932" target="_blank" rel="noopener">
-          <span class="action-icon">◉</span>
-          <span><strong>WhatsApp</strong><small>Démarrer une conversation</small></span>
-        </a>
-
-        <a class="action" href="thomas-bailly.vcf" download>
-          <span class="action-icon">＋</span>
-          <span><strong>Ajouter aux contacts</strong><small>Carte vCard</small></span>
-        </a>
-
-        <a class="action wide" href="mailto:contact.bailly.immobilier@gmail.com?subject=Proposition%20de%20bien%20immobilier&body=Bonjour%20Thomas%2C%0A%0AJe%20souhaite%20vous%20proposer%20le%20bien%20suivant%20%3A%0A%0AType%20de%20bien%20%3A%0ALocalisation%20%3A%0APrix%20%3A%0ATravaux%20%C3%A0%20pr%C3%A9voir%20%3A%0AInformations%20compl%C3%A9mentaires%20%3A%0A">
-          <span class="action-icon">⌂</span>
-          <span><strong>Me proposer un bien</strong><small>Envoyer les informations du bien</small></span>
-        </a>
-      </div>
-
-      <div class="zone">
-        <span>⌖</span>
-        <div>
-          <strong>Secteur d’intervention</strong>
-          <small>Béziers et alentours</small>
-        </div>
-      </div>
-
-      <button id="shareBtn" class="share" type="button">Partager ma carte</button>
-
-      <p class="signature">Bailly Immobilier</p>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+<section class="footer-card">
+<div class="zone"><span class="ico">⌖</span><span><strong>Secteur d’intervention</strong><small>Béziers et alentours</small></span></div>
+<button id="shareBtn" class="share" type="button">Partager ma carte</button>
+</section>
+<p class="signature">Bailly Immobilier</p>
+</section>
+</main>
+<script src="script.js"></script>
 </body>
 </html>
