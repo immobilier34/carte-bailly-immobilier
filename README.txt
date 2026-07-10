@@ -1,12 +1,7 @@
-VERSION V10
+Version V11
 
-Modification unique :
-- le bloc « Secteur d’intervention » reste centré ;
-- le texte est rapproché de l’icône de localisation ;
-- les boutons et tous les autres éléments restent inchangés.
+Modifications :
+- Bouton renommé « Proposer un bien »
+- Sous-titre : « Vous avez un bien à vendre ? »
 
-Dans GitHub, remplace :
-- index.html
-- logo-bailly.png
-
-Puis valide avec « Commit changes » et attends 1 à 3 minutes.
+Remplacez les fichiers du dépôt GitHub par ceux de cette archive.
