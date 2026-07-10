@@ -110,15 +110,31 @@ body{
 }
 .primary .copy small{color:rgba(7,23,43,.68)}
 .arrow{margin-left:auto;color:var(--gold2);font:400 1.5rem Arial,sans-serif}
-.footer{
-  margin-top:10px;
-  padding:12px;
-  border:1px solid var(--line);
-  border-radius:15px
+
+.info{
+  margin-top:14px;
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  padding:0 4px;
+  color:var(--muted)
 }
-.zone{display:flex;align-items:center;gap:11px}
+.info .info-icon{
+  width:28px;height:28px;flex:0 0 28px;
+  display:grid;place-items:center;
+  color:var(--gold2);
+  font-size:1rem
+}
+.info .copy strong{
+  color:var(--text);
+  font-size:.82rem
+}
+.info .copy small{
+  font-size:.75rem;
+  color:var(--muted)
+}
 .sig{
-  margin:14px 0 0;
+  margin:16px 0 0;
   text-align:center;
   color:rgba(247,241,231,.35);
   font-size:.62rem;
@@ -152,9 +168,9 @@ body{
     <span class="arrow">›</span>
   </a>
 
-  <a class="action" href="thomas-bailly.vcf" download>
+  <a class="action" href="thomas-bailly.vcf" download="Thomas-Bailly.vcf" type="text/vcard">
     <span class="ico">＋</span>
-    <span class="copy"><strong>Ajouter aux contacts</strong><small>Enregistrer ma fiche</small></span>
+    <span class="copy"><strong>Ajouter aux contacts</strong><small>Enregistrer directement ma fiche</small></span>
     <span class="arrow">›</span>
   </a>
 
@@ -165,11 +181,9 @@ body{
   </a>
 </section>
 
-<section class="footer">
-  <div class="zone">
-    <span class="ico">⌖</span>
-    <span class="copy"><strong>Secteur d’intervention</strong><small>Béziers et alentours</small></span>
-  </div>
+<section class="info" aria-label="Information de secteur">
+  <span class="info-icon">⌖</span>
+  <span class="copy"><strong>Secteur d’intervention</strong><small>Béziers et alentours</small></span>
 </section>
 
 <p class="sig">Bailly Immobilier</p>

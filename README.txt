@@ -1,10 +1,9 @@
-Remplace dans GitHub les fichiers :
+Remplace dans GitHub :
 - index.html
 - logo-bailly.png
 - thomas-bailly.vcf
 
-Le bouton « Partager ma carte » a été supprimé.
-La hiérarchie visuelle a été revue :
-1. BAILLY IMMOBILIER
-2. Thomas BAILLY
-3. Marchand de biens
+Modifications :
+- Secteur d'intervention présenté comme une information, sans contour ni apparence de bouton.
+- Ajout aux contacts via fichier vCard direct.
+- Bouton Appeler conservé en doré comme action principale.
