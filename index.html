@@ -4,15 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#081b34">
+<meta name="description" content="Carte de visite interactive de Thomas Bailly — Bailly Immobilier.">
 <title>Bailly Immobilier — Thomas Bailly</title>
+<link rel="icon" href="logo-bailly.png">
 <style>
 :root{
   --navy:#081b34;
+  --navy-light:#12345b;
   --gold:#c6a15b;
-  --gold2:#e3cf9d;
+  --gold-light:#e3cf9d;
   --text:#fbf8f1;
   --muted:#bdc7d2;
-  --line:rgba(227,207,157,.24)
+  --line:rgba(227,207,157,.24);
 }
 *{box-sizing:border-box}
 html,body{min-height:100%}
@@ -21,56 +24,67 @@ body{
   color:var(--text);
   font-family:Georgia,"Times New Roman",serif;
   background:
-    radial-gradient(circle at 50% -10%,rgba(198,161,91,.15),transparent 34rem),
-    linear-gradient(145deg,#061326,#081b34 58%,#0c2748)
+    radial-gradient(circle at 50% -8%,rgba(198,161,91,.16),transparent 34rem),
+    linear-gradient(145deg,#061326,#081b34 58%,#0c2748);
 }
-.shell{min-height:100vh;display:grid;place-items:center;padding:14px}
+.shell{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  padding:14px;
+}
 .card{
   width:min(100%,440px);
   border:1px solid var(--line);
   border-radius:26px;
-  padding:22px 18px 18px;
+  padding:20px 18px 18px;
   background:linear-gradient(180deg,rgba(18,52,91,.94),rgba(8,27,52,.98));
-  box-shadow:0 22px 60px rgba(0,0,0,.38)
+  box-shadow:0 22px 60px rgba(0,0,0,.38);
 }
 .hero{text-align:center}
 .logo{
-  width:112px;height:112px;margin:0 auto 14px;border-radius:50%;
-  display:block;object-fit:cover;border:3px solid var(--gold2)
+  width:128px;
+  height:128px;
+  margin:0 auto 10px;
+  border-radius:50%;
+  display:block;
+  object-fit:cover;
+  border:3px solid var(--gold-light);
+  box-shadow:0 12px 28px rgba(0,0,0,.28);
 }
 .brand{
   margin:0;
-  color:var(--gold2);
-  letter-spacing:.16em;
-  font-size:1.48rem;
+  color:var(--gold-light);
+  letter-spacing:.15em;
+  font-size:1.46rem;
   font-weight:700;
-  line-height:1.1
+  line-height:1.08;
 }
 .name{
-  margin:12px 0 0;
-  font-size:1.14rem;
+  margin:8px 0 0;
+  font-size:1.08rem;
   letter-spacing:.05em;
   font-weight:600;
-  color:var(--text)
+  color:var(--text);
 }
 .role{
-  margin:7px 0 0;
-  color:var(--gold2);
+  margin:5px 0 0;
+  color:var(--gold-light);
   font-weight:700;
   letter-spacing:.12em;
   text-transform:uppercase;
-  font-size:.78rem
+  font-size:.77rem;
 }
-.tag{
-  margin:12px 0 0;
+.tagline{
+  margin:10px 0 0;
   color:var(--muted);
-  font-size:.88rem
+  font-size:.88rem;
 }
-.tag span{color:var(--gold);padding:0 3px}
+.tagline span{color:var(--gold);padding:0 3px}
 .divider{
   height:1px;
-  margin:18px 0;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent)
+  margin:17px 0;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
 }
 .actions{display:grid;gap:10px}
 .action{
@@ -83,110 +97,164 @@ body{
   gap:11px;
   text-decoration:none;
   color:var(--text);
-  background:rgba(255,255,255,.04)
+  background:rgba(255,255,255,.04);
+  transition:transform .16s ease,background .16s ease,border-color .16s ease;
 }
-.primary{
+.action:active{transform:scale(.99)}
+.action.primary{
   background:linear-gradient(145deg,#d7b873,#b98e47);
   color:#07172b;
-  border-color:transparent
+  border-color:transparent;
 }
-.emphasis{
+.action.emphasis{
   border-color:rgba(198,161,91,.48);
-  background:rgba(198,161,91,.06)
+  background:rgba(198,161,91,.06);
 }
-.ico{
-  width:34px;height:34px;flex:0 0 34px;border-radius:50%;
-  display:grid;place-items:center;
+.icon-wrap{
+  width:36px;
+  height:36px;
+  flex:0 0 36px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
   background:rgba(198,161,91,.12);
-  color:var(--gold2)
+  color:var(--gold-light);
 }
-.primary .ico{background:rgba(7,23,43,.12);color:#07172b}
-.copy{min-width:0;display:flex;flex-direction:column;gap:3px}
-.copy strong{font:700 .9rem Arial,sans-serif}
+.primary .icon-wrap{
+  background:rgba(7,23,43,.12);
+  color:#07172b;
+}
+.icon{
+  width:18px;
+  height:18px;
+  stroke:currentColor;
+  stroke-width:1.8;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.copy{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+.copy strong{font:700 .91rem Arial,sans-serif}
 .copy small{
   font:400 .72rem Arial,sans-serif;
   color:var(--muted);
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
 }
 .primary .copy small{color:rgba(7,23,43,.68)}
-.arrow{margin-left:auto;color:var(--gold2);font:400 1.5rem Arial,sans-serif}
-
+.arrow{
+  margin-left:auto;
+  color:var(--gold-light);
+  font:400 1.5rem Arial,sans-serif;
+}
+.primary .arrow{color:#07172b}
 .info{
-  margin-top:14px;
+  margin-top:16px;
+  padding:0 4px;
   display:flex;
   align-items:flex-start;
   gap:10px;
-  padding:0 4px;
-  color:var(--muted)
 }
-.info .info-icon{
-  width:28px;height:28px;flex:0 0 28px;
-  display:grid;place-items:center;
-  color:var(--gold2);
-  font-size:1rem
+.info-icon{
+  width:28px;
+  height:28px;
+  flex:0 0 28px;
+  display:grid;
+  place-items:center;
+  color:var(--gold-light);
 }
 .info .copy strong{
   color:var(--text);
-  font-size:.82rem
+  font-size:.82rem;
 }
 .info .copy small{
+  color:var(--muted);
   font-size:.75rem;
-  color:var(--muted)
 }
-.sig{
+.signature{
   margin:16px 0 0;
   text-align:center;
-  color:rgba(247,241,231,.35);
+  color:rgba(247,241,231,.34);
   font-size:.62rem;
   letter-spacing:.2em;
-  text-transform:uppercase
+  text-transform:uppercase;
+}
+@media(max-width:360px){
+  .logo{width:118px;height:118px}
+  .brand{font-size:1.28rem}
+  .name{font-size:1rem}
 }
 </style>
 </head>
 <body>
-<main class="shell"><section class="card">
+<main class="shell">
+<section class="card">
 <header class="hero">
   <img src="logo-bailly.png" class="logo" alt="Logo Bailly Immobilier">
   <p class="brand">BAILLY IMMOBILIER</p>
   <p class="name">Thomas BAILLY</p>
   <p class="role">Marchand de biens</p>
-  <p class="tag">Acquisition <span>•</span> Rénovation <span>•</span> Revente</p>
+  <p class="tagline">Acquisition <span>•</span> Rénovation <span>•</span> Revente</p>
 </header>
 
 <div class="divider"></div>
 
 <section class="actions">
   <a class="action primary" href="tel:+33618897932">
-    <span class="ico">☎</span>
+    <span class="icon-wrap" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.8a2 2 0 0 1-.45 2.11L8.09 9.88a16 16 0 0 0 6 6l1.25-1.25a2 2 0 0 1 2.11-.45c.9.32 1.84.55 2.8.68A2 2 0 0 1 22 16.92z"/>
+      </svg>
+    </span>
     <span class="copy"><strong>Appeler</strong><small>06 18 89 79 32</small></span>
     <span class="arrow">›</span>
   </a>
 
   <a class="action" href="mailto:contact.bailly.immobilier@gmail.com">
-    <span class="ico">✉</span>
+    <span class="icon-wrap" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z"/>
+        <path d="m4 6 8 6 8-6"/>
+      </svg>
+    </span>
     <span class="copy"><strong>Envoyer un e-mail</strong><small>contact.bailly.immobilier@gmail.com</small></span>
     <span class="arrow">›</span>
   </a>
 
-  <a class="action" href="thomas-bailly.vcf" download="Thomas-Bailly.vcf" type="text/vcard">
-    <span class="ico">＋</span>
-    <span class="copy"><strong>Ajouter aux contacts</strong><small>Enregistrer directement ma fiche</small></span>
-    <span class="arrow">›</span>
-  </a>
-
-  <a class="action emphasis" href="mailto:contact.bailly.immobilier@gmail.com?subject=Proposition%20de%20bien%20immobilier">
-    <span class="ico">⌂</span>
+  <a class="action emphasis" href="mailto:contact.bailly.immobilier@gmail.com?subject=Proposition%20de%20bien%20immobilier&body=Bonjour%20Thomas%2C%0A%0AJe%20souhaite%20vous%20proposer%20le%20bien%20suivant%20%3A%0A%0AType%20de%20bien%20%3A%0ALocalisation%20%3A%0APrix%20%3A%0ATravaux%20%C3%A0%20pr%C3%A9voir%20%3A%0AInformations%20compl%C3%A9mentaires%20%3A%0A">
+    <span class="icon-wrap" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M3 11.5 12 4l9 7.5"/>
+        <path d="M5 10.5V20h14v-9.5"/>
+        <path d="M9 20v-6h6v6"/>
+      </svg>
+    </span>
     <span class="copy"><strong>Me proposer un bien</strong><small>Envoyer les informations du bien</small></span>
     <span class="arrow">›</span>
   </a>
 </section>
 
-<section class="info" aria-label="Information de secteur">
-  <span class="info-icon">⌖</span>
-  <span class="copy"><strong>Secteur d’intervention</strong><small>Béziers et alentours</small></span>
+<section class="info" aria-label="Secteur d'intervention">
+  <span class="info-icon" aria-hidden="true">
+    <svg class="icon" viewBox="0 0 24 24">
+      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/>
+      <circle cx="12" cy="10" r="2.5"/>
+    </svg>
+  </span>
+  <span class="copy">
+    <strong>Secteur d’intervention</strong>
+    <small>Béziers et alentours</small>
+  </span>
 </section>
 
-<p class="sig">Bailly Immobilier</p>
-</section></main>
+<p class="signature">Bailly Immobilier</p>
+</section>
+</main>
 </body>
 </html>
