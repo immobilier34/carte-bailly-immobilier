@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:BAILLY;Thomas;;;
+FN:Thomas BAILLY
+ORG:BAILLY IMMOBILIER
+TITLE:Marchand de biens
+TEL;TYPE=CELL:+33618897932
+EMAIL;TYPE=INTERNET:contact.bailly.immobilier@gmail.com
+ADR;TYPE=WORK:;;;;Béziers et alentours;;France
+NOTE:Acquisition - Rénovation - Revente
+END:VCARD
