@@ -1,1 +1,1 @@
-V8 : secteur d'intervention centré. Remplacer index.html et logo-bailly.png puis attendre 1 à 3 minutes.
+V9 : secteur parfaitement centré sans décaler le bouton Appeler. Remplacer index.html et logo-bailly.png.
